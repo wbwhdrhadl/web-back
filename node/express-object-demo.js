@@ -1,41 +1,6 @@
 const express = require('express')
 const app = express()
 
-// GET + "/"
-app.get('/', function(req,res) {
-    res.send('Hello World')
-})
-
-// API : GET + "http://localhost:1234/test"
-
-app.get('/test', function(req,res) {
-    res.send('TEST SUCCESS')
-})
-
-// API : GET + "http://localhost:1234/test/1"
-// "One!!"
-app.get('/test/1', function(req,res) {
-    res.send('One!')
-})
-
-// GET /hello, /bye, /nicetomeetyou
-app.get('/hello', function(req,res) {
-    res.send('hello')
-})
-
-app.get('/bye', function(req,res) {
-    res.send('bye')
-})
-
-app.get('/nicetomeetyou', function(req,res) {
-    res.send('nicetomeetyou')
-})
-
-app.get('/product/1', function(req,res) {
-    res.send('Node.js를 배워보자 (책)')
-    // res.send(200)
-})
-
 // object 객체 hello
 app.get('/helloobj', function(req,res) {
     res.send({
