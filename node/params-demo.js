@@ -38,3 +38,30 @@ app.get('/products/:n' ,  function(req,res){
         num : req.params.n
     })
 })
+
+app.get('/:nickname', function(req,res){
+
+    const param = req.params
+
+    res.json({
+        channel : param.nickname
+    })
+})
+
+// 영상 클릭 주소 유튜브
+
+app.get('/watch', function(req,res){
+    // const q = req.query // q = {v:_,t:_}의 형식을 가진다
+    // console.log(q.v)
+    // console.log(q.t)
+
+    const {v,t} = req.query
+    console.log(v)
+    console.log(t)
+    
+    res.json({
+        video : q.v,
+        timeline : q.t
+    })
+})
+
