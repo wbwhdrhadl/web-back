@@ -44,3 +44,18 @@ app.get('/youtuber/:id', function(res, req) {
         res.json(youtuber)
     }
 })
+
+app.use(expres.json()) //http외 모듈인 미들웨어 json 설정
+app.post('/youtuber', (req, res)=> {
+    console.log(req.body)
+
+    // map 에 저장을 해야함
+
+    db.set(4, req.body)
+
+    res.json({
+        message: db.get(4).channelTitle+ "님 유튜버가 되신것을 축하드립니다" 
+    })
+})
+
+
